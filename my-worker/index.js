@@ -5,7 +5,7 @@ addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
 
-const base = 'https://example.com/'
+const base = 'https://my-worker.rnair12599.workers.dev/'
 const staticPage = 'https://static-links-page.signalnerve.workers.dev'
 const profileImg = 'https://avatars3.githubusercontent.com/u/42459030?s=460&u=4280d4af082977f5882e45f4bd721478ddbd83b9&v=4'
 const backgroundImg = 'https://i.redd.it/q08jnhuaqnt51.png'
@@ -67,11 +67,11 @@ class MediaRewriter{
 async function handleRequest(request) {
 
 
-  if(request.url === base + '/links'){
+  if(request.url === base + 'links'){
     const res = new Response(
-        JSON.stringify(linksArr, null, 2), 
+        JSON.stringify(linksArr), 
         {
-          headers : {'Content-Type': 'application/json; charset=utf-8',},
+          headers : {'Content-Type': 'application/json;',},
     })
     return res
 
@@ -107,16 +107,6 @@ async function handleRequest(request) {
     })
     return res
   }
-
-
-
-
-
-  
-
-
- 
-
 
 
 
