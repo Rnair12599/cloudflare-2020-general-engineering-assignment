@@ -1,0 +1,1 @@
+const staticUrl = "https://static-links-page.signalnerve.workers.dev";
